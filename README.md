@@ -2,7 +2,7 @@
 A  RESTful web service that can manage a real-time inventory system. The application should be able to perform basic CRUD operations on the inventory and allow real-time updates to all connected clients via websockets.
 
 
-## Instructions: 
+## Objectives: 
     1. Create a Node.js/Express.js project that implements a RESTful API for inventory management. The API should support the following endpoints: 
         a. GET /inventory - Retrieve the entire inventory 
         b. GET /inventory/:id - Retrieve a single item from the inventory 
