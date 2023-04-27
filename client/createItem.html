@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Vikas Mehre" />
+    <meta
+      name="description"
+      content="Add a New Product/Item to the Database."
+    />
+    <title>Create Item</title>
+
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="js/socket.js" defer></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/createItem.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header__h1">Create Item</h1>
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <li>
+            <a href="index.html">Inventory</a>
+          </li>
+          <li>
+            <a href="getItemByID.html">Get Item</a>
+          </li>
+          <li>
+            <a href="updateItem.html">Update Item</a>
+          </li>
+          <li>
+            <a href="deleteItemByID.html">Delete Item</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <article class="main__article item">
+        <h2 class="item__h2">Fill details about the Item</h2>
+
+        <form class="item__form" onsubmit="onFormSubmit();">
+          <fieldset class="item__fieldset">
+            <p class="item__p">
+              <label class="item__label" for="title">Title:</label>
+              <input
+                class="item__input"
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Name of Item"
+                required
+              />
+            </p>
+
+            <p class="item__p">
+              <label class="item__label" for="price">Price:</label>
+              <input
+                class="item__input"
+                type="number"
+                name="price"
+                min="0"
+                step="0.01"
+                id="price"
+                placeholder="Cost of the Item"
+                required
+              />
+            </p>
+
+            <p class="item__p">
+              <label class="item__label" for="quantity">Quantity:</label>
+              <input
+                class="item__input"
+                type="number"
+                name="quantity"
+                id="quantity"
+                placeholder="Quantity of the Item"
+                required
+              />
+            </p>
+
+            <p class="item__p">
+              <label class="item__label" for="description">Description:</label>
+              <br />
+              <textarea
+                class="item__textarea"
+                name="description"
+                id="description"
+                cols="50"
+                rows="2"
+                placeholder="Describe the Item"
+                required
+              ></textarea>
+            </p>
+          </fieldset>
+
+          <button class="item__button" type="submit">Send</button>
+          <button class="item__button" type="reset">Reset</button>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>
